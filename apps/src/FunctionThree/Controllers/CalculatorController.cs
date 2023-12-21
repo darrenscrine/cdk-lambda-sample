@@ -45,4 +45,13 @@ public class CalculatorController : ControllerBase
         _logger.LogInformation($"{x} divide {y} is {x / y}");
         return x / y;
     }
+
+    // GET calculator/squareroot/4
+    [HttpGet("squareroot/{x}")]
+    public double SquareRoot(int x)
+    {
+        _logger.LogInformation($"Square root of {x} is {Math.Sqrt(x)}");
+        return Math.Sqrt(x);
+    }
+
 }
